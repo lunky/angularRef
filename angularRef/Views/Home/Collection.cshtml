@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Collection";
+}
+@section featured
+{
+        @Html.ActionLink("Demo", "Demo", "Home")
+        
+}
+@section scripts
+{
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-resource.js"></script>
+    <script src="~/Scripts/collection.js"></script>
+
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</  hgroup>
+
+<article>
+    <p>
+<div ng-controller="Mother">
+    <ul class="unstyled">
+        <li ng-repeat="kid in kids">name: <b ng-click="">{{kid.Name}}</b> <input type="text" class="hidden" ng-model="kid.Name"/>  age: <b>{{kid.Age}}</b>
+            <button ng-click="incrementAge()" class="btn">+</button>
+            <button ng-click="remove()" class="btn-link">remove</button>
+
+        </li>
+    </ul>
+    <form class="form-inline" ng-submit="Add()">
+        <fieldset>
+            <legend>Add</legend>
+            <div class="form-group">
+                <label for="newKid">name:</label>
+                <input id="newKid" type="text" ng-model="newKid" placeholder="name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="newAge">age:</label>
+                <input type="text" id="newAge" ng-model="newAge" value="1" class="form-control input-sm" />
+            </div>
+            <div>
+                <input type="submit" value="Add" class="btn btn-default" />
+            </div>
+        </fieldset>
+    </form>
+    <br />
+    <button ng-click="puke()" class="btn">puke</button>
+    <button ng-click="save()" class="btn">save</button>
+    <button ng-click="refresh()" class="btn">refresh</button>
+</div>
+    </p>
+</article>
+
+<aside>
+    <h3>Aside Title</h3>
+    <p>
+        Use this area to provide additional information.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>
