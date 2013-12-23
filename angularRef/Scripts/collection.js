@@ -24,7 +24,7 @@ function Mother($scope, $http) {
     $scope.save = function () {
         //$http.post('/someUrl', data).success(successCallback);
         $http.post('SaveKids', $scope.kids).success(function () {
-//            $scope.refresh();
+        $scope.refresh();
         });
     };
     $scope.refresh = function() {

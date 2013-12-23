@@ -45,9 +45,14 @@ namespace angularRef.Service
 				{
 					throw new Exception("Entity not found.");
 				}
+				
 				saveKid.Age = kid.Age;
 				saveKid.Name = kid.Name;
 				saveKid.FamilyId = kid.FamilyId;
+				if (kid.IsDeleted)
+				{
+					_kidRepository.Delete(kid.Id);
+				}
 			}
 			var changes = _unitOfWork.SaveChanges();
 			System.Diagnostics.Debug.WriteLine("changes " + changes);
