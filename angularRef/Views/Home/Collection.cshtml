@@ -23,7 +23,7 @@
     <p>
 <div ng-controller="Mother">
     <ul class="unstyled">
-        <li ng-repeat="kid in kids">name: <b ng-click="">{{kid.Name}}</b> <input type="text" class="hidden" ng-model="kid.Name"/>  age: <b>{{kid.Age}}</b>
+        <li ng-repeat="kid in kids">name: <b class="deleted-{{kid.IsDeleted}}" ng-click="">{{kid.Name}}</b> <input type="text" class="hidden" ng-model="kid.Name"/>  age: <b>{{kid.Age}}</b>
             <button ng-click="incrementAge()" class="btn">+</button>
             <button ng-click="remove()" class="btn-link">remove</button>
 

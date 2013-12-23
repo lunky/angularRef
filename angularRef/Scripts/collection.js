@@ -14,7 +14,8 @@ function Mother($scope, $http) {
         $scope.newKid = "";
     };
     $scope.remove = function () {
-        $scope.kids.pop(this.kid);
+        //$scope.kids.pop(this.kid);
+        this.kid.IsDeleted = true;
     };
     $scope.puke = function () {
         var msg = JSON.stringify($scope.kids);

@@ -48,9 +48,8 @@ namespace angularRef.Service
 				saveKid.Age = kid.Age;
 				saveKid.Name = kid.Name;
 				saveKid.FamilyId = kid.FamilyId;
-
 			}
-			var changes = _kidRepository.SaveChanges();
+			var changes = _unitOfWork.SaveChanges();
 			System.Diagnostics.Debug.WriteLine("changes " + changes);
 		}
 

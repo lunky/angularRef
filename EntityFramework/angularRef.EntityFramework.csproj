@@ -44,6 +44,10 @@
     <Compile Include="Migrations\201312160516138_addFamilyId.Designer.cs">
       <DependentUpon>201312160516138_addFamilyId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312231418414_isDeleted.cs" />
+    <Compile Include="Migrations\201312231418414_isDeleted.Designer.cs">
+      <DependentUpon>201312231418414_isDeleted.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +64,12 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
@@ -75,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312160516138_addFamilyId.resx">
       <DependentUpon>201312160516138_addFamilyId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312231418414_isDeleted.resx">
+      <DependentUpon>201312231418414_isDeleted.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

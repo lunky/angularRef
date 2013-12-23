@@ -6,7 +6,6 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using angularRef.App_Start;
 using angularRef.Service;
 using Shared;
 
@@ -26,7 +25,7 @@ namespace angularRef
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
 			MapperConfig.RegisterMappings();
-			//			AuthConfig.RegisterAuth();
+			Bootstrapper.Initialise();
 		}
 	}
 }

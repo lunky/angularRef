@@ -6,5 +6,6 @@
 		public int Age { get; set; }
 		public string Name { get; set; }
 		public int FamilyId { get; set; }
+		public bool IsDeleted { get; set; }
 	}
 }

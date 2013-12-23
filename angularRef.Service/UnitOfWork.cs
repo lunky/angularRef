@@ -18,6 +18,7 @@ namespace angularRef.Service
 
 		public int SaveChanges()
 		{
+			_context.ChangeTracker.DetectChanges();
 			return _context.SaveChanges();
 		}
 	}

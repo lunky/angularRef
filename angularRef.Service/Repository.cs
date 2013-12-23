@@ -25,6 +25,9 @@ namespace angularRef.Service
 
 		public virtual IQueryable<TEntity> All(params Expression<Func<TEntity, object>>[] entitiesToInclude)
 		{
+			Debug.WriteLine("All()");
+			Debug.WriteLine("Repository context = " + AppContext.GetHashCode());
+
 			return entitiesToInclude.Aggregate((IQueryable<TEntity>)DbSet, (current, entityToInclude) => current.Include(entityToInclude));
 		}
 
@@ -62,6 +65,7 @@ namespace angularRef.Service
 			Debug.WriteLine("FindById()");
 			Debug.WriteLine("Repository context = " + AppContext.GetHashCode());
 			return Find(x => x.Id == id, entitiesToInclude).FirstOrDefault();
+			//return AppContext.Set<TEntity>().FirstOrDefault(f => f.Id == id);
 		}
 
 		public IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] entitiesToInclude)
@@ -73,6 +77,7 @@ namespace angularRef.Service
 		{
 			Debug.WriteLine("SaveChanges()");
 			Debug.WriteLine("Repository context = " + AppContext.GetHashCode());
+			AppContext.ChangeTracker.DetectChanges();
 			return AppContext.SaveChanges();
 		}
 
