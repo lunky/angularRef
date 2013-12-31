@@ -35,7 +35,10 @@ namespace angularRef.Service
 				if (!isEditAction)
 				{
 					saveKid = new Kid();
-					_kidRepository.Insert(saveKid);
+					if (!kid.IsDeleted)
+					{
+						_kidRepository.Insert(saveKid);
+					}
 				}
 				else
 				{

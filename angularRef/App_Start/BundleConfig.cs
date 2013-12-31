@@ -11,6 +11,7 @@ namespace angularRef
 					"~/Scripts/angular.min.js"));
 
 			bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+			bundles.Add(new StyleBundle("~/Content/bootstrap").Include("~/Content/bootstrap.css"));
 
 			bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
 						"~/Content/bootstrap-min.css"));

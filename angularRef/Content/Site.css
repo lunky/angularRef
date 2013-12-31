@@ -1,37 +1,4 @@
-﻿html {
-    background-color: #e2e2e2;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #fff;
-    border-top: solid 10px #000;
-    color: #333;
-    font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    color: #333;
-    outline: none;
-    padding-left: 3px;
-    padding-right: 3px;
-    text-decoration: underline;
-}
-
-    a:link, a:visited,
-    a:active, a:hover {
-        color: #333;
-    }
-
-    a:hover {
-        background-color: #c7d1d6;
-    }
-
-header, footer, hgroup,
+﻿header, footer, hgroup,
 nav, section {
     display: block;
 }
@@ -58,37 +25,6 @@ mark {
     visibility: hidden;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
-    color: #000;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-h1 {
-    font-size: 2em;
-}
-
-h2 {
-    font-size: 1.75em;
-}
-
-h3 {
-    font-size: 1.2em;
-}
-
-h4 {
-    font-size: 1.1em;
-}
-
-h5, h6 {
-    font-size: 1em;
-}
-
-    h5 a:link, h5 a:visited, h5 a:active {
-        padding: 0;
-        text-decoration: none;
-    }
 
 
 /* main layout
@@ -104,15 +40,6 @@ h5, h6 {
     padding-bottom: 35px;
 }
 
-    .main-content {
-        background: url("../Images/accent.png") no-repeat;
-        padding-left: 10px;
-        padding-top: 30px;
-    }
-
-    .featured + .main-content {
-        background: url("../Images/heroAccent.png") no-repeat;
-    }
 
 header .content-wrapper {
     padding-top: 20px; 
@@ -758,4 +685,30 @@ tr.pager td {
 	color: red;
 	font-weight: bold;
 	text-decoration: underline;
+}
+
+.Mother li{
+	        list-style: none;
+}
+
+.nameInput {
+	width: 200px;
+}
+
+.ageInput {
+	width: 200px;
+}
+
+
+.statusBar {
+	padding: 20px;
+}
+.statusWarning {
+	background-color: yellow;
+}
+.statusCool {
+	background-color: green;
+}
+.statusAlert {
+	background-color: red ;
 }

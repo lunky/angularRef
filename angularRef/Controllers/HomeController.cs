@@ -42,7 +42,7 @@ namespace angularRef.Controllers
 			return result;
 		}
 
-		public JsonResult Demo()
+		public JsonResult GetKids()
 		{
 			var kids = _kidService.GetKids();
 			return Json(kids, JsonRequestBehavior.AllowGet);
